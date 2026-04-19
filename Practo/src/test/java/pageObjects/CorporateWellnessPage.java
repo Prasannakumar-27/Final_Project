@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import base.BasePage;
 import utilities.ScreenShotUtil;
 
 public class CorporateWellnessPage extends BasePage{
@@ -18,7 +19,6 @@ public class CorporateWellnessPage extends BasePage{
     public CorporateWellnessPage(WebDriver driver) {
         super(driver);
     }
-    ScreenShotUtil scr = new ScreenShotUtil();
 
     @FindBy(xpath = "//span[@class='nav-interact' and text()='For Corporates']")
     private WebElement forCorporates;
@@ -70,7 +70,6 @@ public class CorporateWellnessPage extends BasePage{
 
     public void selectInterestedIn(String option) {
         new Select(interestedIn).selectByVisibleText(option);
-        scr.screenShotTC(driver,"Form filling page");
     }
 
     public void submitForm() {

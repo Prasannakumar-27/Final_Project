@@ -7,14 +7,22 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import pageObjects.*;
+import base.BaseClass;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import pageObjects.HomePage;
+import pageObjects.HospitalDetailPage;
+import pageObjects.HospitalListPage;
 import utilities.ExcelUtils;
 
 public class TC_001_Identify_Hospitals extends BaseClass {
+	
 
-    @Test
+	@Feature("Hospital Search")
+	@Story("Search hospital by filtering")
+    @Test(priority = 1)
     public void identifyHospitals() throws Exception {
-
+		logger.info("----------Identifying Hospital Test starts ----------");
         // Excel file details
         String xlPath = ".\\testdata\\testData.xlsx";
         String sheetName = "Sheet1";
@@ -24,10 +32,12 @@ public class TC_001_Identify_Hospitals extends BaseClass {
         String hospitalSearch = ExcelUtils.getCellData(xlPath, sheetName, 2, 1);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-
+        
         HomePage home = new HomePage(driver);
         home.selectLocation(location);
+        logger.info("Given Location input and selected the correct location");
         home.selectHospital(hospitalSearch);
+        logger.info("Given Hospital input and selected Hospital");
 
         HospitalListPage listPage = new HospitalListPage(driver);
         List<WebElement> hospitalLinks = listPage.getHospitalLinks();
@@ -38,7 +48,8 @@ public class TC_001_Identify_Hospitals extends BaseClass {
             js.executeScript("arguments[0].scrollIntoView(true);", link);
             urls.add(link.getAttribute("href"));
         }
-
+        
+        logger.info("Getting hospitals");
         for (String url : urls) {
             driver.navigate().to(url);
 
@@ -58,8 +69,10 @@ public class TC_001_Identify_Hospitals extends BaseClass {
                                 + (parking ? "Available" : "Not Mentioned")
                 );
             }
-
+            logger.info("Captured every hospital that matched the criteria");
             driver.navigate().back();
+            
+            logger.info("Redirected to previous page");
         }
     }
 }

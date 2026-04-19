@@ -1,26 +1,18 @@
-2026-04-17 16:04:13 INFO  TC_002_DiagnosticTest:14 -
+2026-04-19 19:58:57 INFO  TC_003_CorporateWellnessTest:20 -
+			----------Corporate Wellness Test starts ----------
+2026-04-19 19:58:59 INFO  TC_003_CorporateWellnessTest:35 -
+			Giving inputs for each field
+2026-04-19 19:59:03 INFO  TC_003_CorporateWellnessTest:45 -
+			Selecting the dropdown options
+2026-04-19 20:00:02 INFO  TC_003_CorporateWellnessTest:55 -
+			CAPTCHA is validated
+2026-04-19 20:00:02 INFO  TC_003_CorporateWellnessTest:59 -
+			Printed the alert message in console
+2026-04-19 20:00:04 INFO  TC_003_CorporateWellnessTest:62 -
+			Redirected to the previous page
+2026-04-19 20:00:17 INFO  TC_002_DiagnosticTest:20 -
 			----------Diagnostic Test starts ----------
-2026-04-17 16:04:13 INFO  TC_002_DiagnosticTest:18 -
+2026-04-19 20:00:17 INFO  TC_002_DiagnosticTest:24 -
 			Clicking diagnostic page
-2026-04-17 16:04:13 INFO  TC_002_DiagnosticTest:21 -
+2026-04-19 20:00:17 INFO  TC_002_DiagnosticTest:27 -
 			Printing Top Cities in Diagnostic Page
-2026-04-17 16:28:49 INFO  TC_002_DiagnosticTest:14 -
-			----------Diagnostic Test starts ----------
-2026-04-17 16:28:49 INFO  TC_002_DiagnosticTest:18 -
-			Clicking diagnostic page
-2026-04-17 16:28:49 INFO  TC_002_DiagnosticTest:21 -
-			Printing Top Cities in Diagnostic Page
-2026-04-17 16:29:03 INFO  TC_002_DiagnosticTest:14 -
-			----------Diagnostic Test starts ----------
-2026-04-17 16:29:03 INFO  TC_002_DiagnosticTest:18 -
-			Clicking diagnostic page
-2026-04-17 16:29:03 INFO  TC_002_DiagnosticTest:21 -
-			Printing Top Cities in Diagnostic Page
-2026-04-17 16:38:58 INFO  TC_002_DiagnosticTest:14 -
-			----------Diagnostic Test starts ----------
-2026-04-17 16:38:58 INFO  TC_002_DiagnosticTest:18 -
-			Clicking diagnostic page
-2026-04-17 16:38:58 INFO  TC_002_DiagnosticTest:21 -
-			Printing Top Cities in Diagnostic Page
-2026-04-17 16:39:02 ERROR TC_002_DiagnosticTest:24 -
-			----------Test Failed----------

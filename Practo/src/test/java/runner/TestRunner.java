@@ -7,13 +7,16 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
     //features = "src/test/resources/features",
-	//features = "src/test/resources/features/CorporateWellness.feature",
-    features = "@target/rerun.txt",
-    
+	features = "src/test/resources/features/CorporateWellness.feature",
+	//features = "src/test/resources/features/DiagnosticTopCities.feature",
+    //features = "@target/rerun.txt",
+	
+	//tags = "@regression",
     glue = {"stepdefinitions","hooks"}, // Ensure this matches your package name exactly (lowercase)
     plugin = {
         "pretty",
         "html:target/cucumber-reports.html",
+        "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
         "rerun:target/rerun.txt"
     },
     monochrome = true

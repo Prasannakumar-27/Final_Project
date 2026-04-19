@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import base.BasePage;
 import utilities.ScreenShotUtil;
 
 import io.qameta.allure.Step;
@@ -29,19 +30,17 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@class='c-omni-suggestion-group']//div[normalize-space()='"+HOSPITAL+"']")
     private WebElement hospitalOption;
     
-    ScreenShotUtil scr = new ScreenShotUtil();
+    
     @Step("Selecting location: {0}")
     public void selectLocation(String location) {
         searchLocation.clear();
         searchLocation.sendKeys(location);
         wait.until(ExpectedConditions.elementToBeClickable(bangaloreOption)).click();
-        scr.screenShotTC(driver,"Selecting location");
     }
     
     @Step("Searching hospital: {0}")
     public void selectHospital(String hospital) {
         searchHospital.sendKeys(hospital);
         wait.until(ExpectedConditions.elementToBeClickable(hospitalOption)).click();
-        scr.screenShotTC(driver,"Selecting hospital");
     }
 }

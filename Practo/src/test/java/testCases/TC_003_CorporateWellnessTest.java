@@ -4,15 +4,20 @@ import java.util.Scanner;
 
 import org.testng.annotations.Test;
 
-import pageObjects.BaseClass;
+import base.BaseClass;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pageObjects.CorporateWellnessPage;
 import utilities.ExcelUtils;
 
 public class TC_003_CorporateWellnessTest extends BaseClass {
+	
 
-    @Test
+	@Feature("Corporate Wellness")
+	@Story("Send Invalid data and get Alert message")
+    @Test(priority = 3)
     public void verifyCorporateWellnessDemoForm() throws Exception {
-
+		logger.info("----------Corporate Wellness Test starts ----------");
         // ✅ Excel details
         String xlPath = ".\\testdata\\testData.xlsx";
         String sheetName = "Sheet1";
@@ -26,7 +31,8 @@ public class TC_003_CorporateWellnessTest extends BaseClass {
         String interest = ExcelUtils.getCellData(xlPath, sheetName, 10, 1);
 
         CorporateWellnessPage wellnessPage = new CorporateWellnessPage(driver);
-
+        
+        logger.info("Giving inputs for each field");
         wellnessPage.openHealthAndWellnessPlans();
 
         wellnessPage.fillForm(
@@ -35,7 +41,8 @@ public class TC_003_CorporateWellnessTest extends BaseClass {
                 mobile,
                 email
         );
-
+        
+        logger.info("Selecting the dropdown options");
         wellnessPage.selectOrganizationSize(orgSize);
         wellnessPage.selectInterestedIn(interest);
 
@@ -45,11 +52,14 @@ public class TC_003_CorporateWellnessTest extends BaseClass {
         Scanner sc = new Scanner(System.in);
         System.out.println("After validating CAPTCHA... Press ENTER");
         sc.nextLine();
+        logger.info("CAPTCHA is validated");
 
         System.out.println("Alert message : " +
                 wellnessPage.getAlertMessage());
+        logger.info("Printed the alert message in console");
 
         driver.navigate().to("https://www.practo.com/plus/corporate");
+        logger.info("Redirected to the previous page");
         sc.close();
     }
 }

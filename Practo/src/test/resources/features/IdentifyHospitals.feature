@@ -1,5 +1,5 @@
 Feature: Identify Hospitals with required facilities
-
+  @smoke
   Scenario: Find hospitals in a location with rating above 3.5 and open 24x7
     Given user is on the Practo home page
     When user selects location "Bangalore"

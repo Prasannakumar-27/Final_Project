@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 09 08:54:09 IST 2026</td>
+<td>Started on:</td><td>Sun Apr 19 19:40:51 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>178 seconds (178686 ms)</td>
+<tr><td>Total time:</td><td>45 seconds (45571 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,25 +76,31 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.TC_001_Identify_Hospitals.identifyHospitals()'><b>identifyHospitals</b><br>Test class: testCases.TC_001_Identify_Hospitals</td>
-<td></td>
-<td>101</td>
-<td>testCases.TC_001_Identify_Hospitals@5852c06f</td></tr>
-<tr>
-<td title='testCases.TC_004_RegisterTest.verifyPasswordStrength()'><b>verifyPasswordStrength</b><br>Test class: testCases.TC_004_RegisterTest</td>
-<td></td>
-<td>4</td>
-<td>testCases.TC_004_RegisterTest@4149c063</td></tr>
-<tr>
-<td title='testCases.TC_003_CorporateWellnessTest.verifyCorporateWellnessDemoForm()'><b>verifyCorporateWellnessDemoForm</b><br>Test class: testCases.TC_003_CorporateWellnessTest</td>
-<td></td>
-<td>31</td>
-<td>testCases.TC_003_CorporateWellnessTest@54e041a4</td></tr>
-<tr>
-<td title='testCases.TC_002_DiagnosticTest.verifyTopCitiesInDiagnosticPage()'><b>verifyTopCitiesInDiagnosticPage</b><br>Test class: testCases.TC_002_DiagnosticTest</td>
-<td></td>
-<td>3</td>
-<td>testCases.TC_002_DiagnosticTest@4b86805d</td></tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit corporate wellness demo request form", "Corporate Wellness Demo Form"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with text: &lt;00
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:400)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:128)
+	at pageObjects.CorporateWellnessPage.selectOrganizationSize(CorporateWellnessPage.java:67)
+	at stepdefinitions.CorporateWellnessSteps.user_selects_organization_size_and_interest(CorporateWellnessSteps.java:45)
+	at ✽.user selects organization size and interest(file:///C:/Users/2475087/git/repository/Practo/src/test/resources/features/CorporateWellness.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1583532569", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1583532569'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with text: &lt;00
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:400)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:128)
+	at pageObjects.CorporateWellnessPage.selectOrganizationSize(CorporateWellnessPage.java:67)
+	at stepdefinitions.CorporateWellnessSteps.user_selects_organization_size_and_interest(CorporateWellnessSteps.java:45)
+	at ✽.user selects organization size and interest(file:///C:/Users/2475087/git/repository/Practo/src/test/resources/features/CorporateWellness.feature:10)
+</pre></div></td>
+<td>43</td>
+<td>runner.TestRunner@352e787a</td></tr>
 </table><p>
 </body>
 </html>

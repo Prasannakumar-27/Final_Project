@@ -2,12 +2,18 @@ package testCases;
 
 import org.junit.Assert;
 import org.testng.annotations.Test;
-import pageObjects.BaseClass;
+
+import base.BaseClass;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pageObjects.DiagnosticPage;
 
 public class TC_002_DiagnosticTest extends BaseClass {
+	
 
-    @Test
+	@Feature("Diagnostic Page")
+	@Story("Search Top Cities")
+    @Test(priority = 2)
     public void verifyTopCitiesInDiagnosticPage() {
     	
     	try {
