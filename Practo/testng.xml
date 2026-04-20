@@ -3,7 +3,7 @@
 <suite name="Suite">
 
 	<listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="listeners.RetryListener"/>
     </listeners>
 
   
@@ -11,9 +11,10 @@
   	<parameter name="browser" value="chrome"/>
     <classes>
       <!-- <class name="testCases.TC_001_Identify_Hospitals"/>
-      <class name="testCases.TC_003_CorporateWellnessTest"/>-->
       <class name="testCases.TC_003_CorporateWellnessTest"/>
-      <class name="testCases.TC_002_DiagnosticTest"/>
+      <class name="testCases.TC_002_DiagnosticTest"/>-->
+      <class name="testCases.TC_003_CorporateWellnessTest"/>
+      
       
     </classes>
   </test>

@@ -1,18 +1,36 @@
-2026-04-19 19:58:57 INFO  TC_003_CorporateWellnessTest:20 -
-			----------Corporate Wellness Test starts ----------
-2026-04-19 19:58:59 INFO  TC_003_CorporateWellnessTest:35 -
-			Giving inputs for each field
-2026-04-19 19:59:03 INFO  TC_003_CorporateWellnessTest:45 -
-			Selecting the dropdown options
-2026-04-19 20:00:02 INFO  TC_003_CorporateWellnessTest:55 -
-			CAPTCHA is validated
-2026-04-19 20:00:02 INFO  TC_003_CorporateWellnessTest:59 -
-			Printed the alert message in console
-2026-04-19 20:00:04 INFO  TC_003_CorporateWellnessTest:62 -
-			Redirected to the previous page
-2026-04-19 20:00:17 INFO  TC_002_DiagnosticTest:20 -
+2026-04-20 15:04:41 INFO  TC_002_DiagnosticTest:22 -
 			----------Diagnostic Test starts ----------
-2026-04-19 20:00:17 INFO  TC_002_DiagnosticTest:24 -
+2026-04-20 15:04:41 INFO  TC_002_DiagnosticTest:26 -
 			Clicking diagnostic page
-2026-04-19 20:00:17 INFO  TC_002_DiagnosticTest:27 -
+2026-04-20 15:04:41 INFO  TC_002_DiagnosticTest:28 -
 			Printing Top Cities in Diagnostic Page
+2026-04-20 15:05:00 INFO  TC_003_CorporateWellnessTest:24 -
+			----------Corporate Wellness Test starts ----------
+2026-04-20 15:05:02 INFO  TC_003_CorporateWellnessTest:39 -
+			Giving inputs for each field
+2026-04-20 15:05:12 INFO  TC_003_CorporateWellnessTest:49 -
+			Selecting the dropdown options
+2026-04-20 15:07:06 INFO  TC_002_DiagnosticTest:22 -
+			----------Diagnostic Test starts ----------
+2026-04-20 15:07:06 INFO  TC_002_DiagnosticTest:26 -
+			Clicking diagnostic page
+2026-04-20 15:07:06 INFO  TC_002_DiagnosticTest:28 -
+			Printing Top Cities in Diagnostic Page
+2026-04-20 15:07:16 INFO  TC_003_CorporateWellnessTest:24 -
+			----------Corporate Wellness Test starts ----------
+2026-04-20 15:07:18 INFO  TC_003_CorporateWellnessTest:39 -
+			Giving inputs for each field
+2026-04-20 15:07:22 INFO  TC_003_CorporateWellnessTest:49 -
+			Selecting the dropdown options
+2026-04-20 15:14:25 INFO  TC_002_DiagnosticTest:22 -
+			----------Diagnostic Test starts ----------
+2026-04-20 15:14:25 INFO  TC_002_DiagnosticTest:26 -
+			Clicking diagnostic page
+2026-04-20 15:14:26 INFO  TC_002_DiagnosticTest:28 -
+			Printing Top Cities in Diagnostic Page
+2026-04-20 15:14:48 INFO  TC_003_CorporateWellnessTest:24 -
+			----------Corporate Wellness Test starts ----------
+2026-04-20 15:14:50 INFO  TC_003_CorporateWellnessTest:39 -
+			Giving inputs for each field
+2026-04-20 15:14:54 INFO  TC_003_CorporateWellnessTest:49 -
+			Selecting the dropdown options

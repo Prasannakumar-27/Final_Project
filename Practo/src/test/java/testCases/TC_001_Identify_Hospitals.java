@@ -5,16 +5,19 @@ import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import listeners.RetryListener;
 import pageObjects.HomePage;
 import pageObjects.HospitalDetailPage;
 import pageObjects.HospitalListPage;
 import utilities.ExcelUtils;
 
+@Listeners(RetryListener.class)
 public class TC_001_Identify_Hospitals extends BaseClass {
 	
 

@@ -2,14 +2,18 @@ package testCases;
 
 import java.util.Scanner;
 
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import listeners.RetryListener;
 import pageObjects.CorporateWellnessPage;
 import utilities.ExcelUtils;
 
+@Listeners(RetryListener.class)
 public class TC_003_CorporateWellnessTest extends BaseClass {
 	
 
@@ -46,6 +50,7 @@ public class TC_003_CorporateWellnessTest extends BaseClass {
         wellnessPage.selectOrganizationSize(orgSize);
         wellnessPage.selectInterestedIn(interest);
 
+        Assert.fail();
         wellnessPage.submitForm();
 
         // CAPTCHA manual pause

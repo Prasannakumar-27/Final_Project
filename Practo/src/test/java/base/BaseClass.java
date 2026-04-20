@@ -13,14 +13,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import utilities.AllureUtils;
 import utilities.ConfigReader;
 
 
@@ -49,7 +47,7 @@ public class BaseClass {
 
 	@BeforeClass
     @Parameters("browser")
-    public void setup(String browser) {
+    public void setup(@Optional("chrome")String browser) {
 		logger = LogManager.getLogger(this.getClass());
         // Browser selection
         if (browser.equalsIgnoreCase("chrome")) {

@@ -1,57 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-19T19:58:49 IST" name="Suite" finished-at="2026-04-19T20:00:22 IST" duration-ms="93357">
+  <suite started-at="2026-04-20T15:05:57 IST" name="Suite" finished-at="2026-04-20T15:06:13 IST" duration-ms="15720">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@352e787a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-04-19T19:58:49 IST" name="Test1" finished-at="2026-04-19T20:00:22 IST" duration-ms="93357">
-      <class name="testCases.TC_002_DiagnosticTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_002_DiagnosticTest@576c5536]" started-at="2026-04-19T20:00:08 IST" name="setup" finished-at="2026-04-19T20:00:17 IST" duration-ms="8785" status="PASS">
+    <test started-at="2026-04-20T15:05:57 IST" name="Test" finished-at="2026-04-20T15:06:13 IST" duration-ms="15720">
+      <class name="runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@352e787a]" started-at="2026-04-20T15:05:57 IST" name="setUpClass" finished-at="2026-04-20T15:05:57 IST" duration-ms="425" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[org.testng.TestRunner@27261190]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyTopCitiesInDiagnosticPage()[pri:2, instance:testCases.TC_002_DiagnosticTest@576c5536]" started-at="2026-04-19T20:00:17 IST" name="verifyTopCitiesInDiagnosticPage" finished-at="2026-04-19T20:00:20 IST" duration-ms="3559" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTopCitiesInDiagnosticPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_002_DiagnosticTest@576c5536]" started-at="2026-04-19T20:00:20 IST" name="tearDown" finished-at="2026-04-19T20:00:22 IST" duration-ms="2068" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC_002_DiagnosticTest -->
-      <class name="testCases.TC_003_CorporateWellnessTest">
-        <test-method is-config="true" signature="copyEnvFile()[pri:0, instance:testCases.TC_003_CorporateWellnessTest@5f80fa43]" started-at="2026-04-19T19:58:49 IST" name="copyEnvFile" finished-at="2026-04-19T19:58:49 IST" duration-ms="42" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- copyEnvFile -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_003_CorporateWellnessTest@5f80fa43]" started-at="2026-04-19T19:58:49 IST" name="setup" finished-at="2026-04-19T19:58:57 IST" duration-ms="7907" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@352e787a]" started-at="2026-04-20T15:05:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-20T15:06:13 IST" duration-ms="15218" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA["Verify top cities displayed in Diagnostic page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Diagnostic Page Top Cities"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyCorporateWellnessDemoForm()[pri:3, instance:testCases.TC_003_CorporateWellnessTest@5f80fa43]" started-at="2026-04-19T19:58:57 IST" name="verifyCorporateWellnessDemoForm" finished-at="2026-04-19T20:00:04 IST" duration-ms="67353" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@352e787a]" started-at="2026-04-20T15:06:13 IST" name="tearDownClass" finished-at="2026-04-20T15:06:13 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCorporateWellnessDemoForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_003_CorporateWellnessTest@5f80fa43]" started-at="2026-04-19T20:00:05 IST" name="tearDown" finished-at="2026-04-19T20:00:08 IST" duration-ms="3455" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC_003_CorporateWellnessTest -->
-    </test> <!-- Test1 -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.TestRunner -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
