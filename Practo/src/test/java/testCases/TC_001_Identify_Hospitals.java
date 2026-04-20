@@ -17,43 +17,68 @@ import pageObjects.HospitalDetailPage;
 import pageObjects.HospitalListPage;
 import utilities.ExcelUtils;
 
+
+
+
+
 @Listeners(RetryListener.class)
 public class TC_001_Identify_Hospitals extends BaseClass {
-	
 
-	@Feature("Hospital Search")
-	@Story("Search hospital by filtering")
+    // Shared list to hold URLs between methods
+    private List<String> hospitalUrls = new ArrayList<>();
+    private final String xlPath = ".\\testdata\\testData.xlsx";
+    private final String sheetName = "Sheet1";
+
+    
+    @Feature("Hospital Search")
+    @Story("Search hospital by filtering")
     @Test(priority = 1)
-    public void identifyHospitals() throws Exception {
-		logger.info("----------Identifying Hospital Test starts ----------");
-        // Excel file details
-        String xlPath = ".\\testdata\\testData.xlsx";
-        String sheetName = "Sheet1";
-
-        // Read data from Excel instead of properties
+    public void searchForHospitals() throws Exception {
+        logger.info("---------- Step 1: Searching for Hospitals ----------");
+        
+        // Read data from Excel
         String location = ExcelUtils.getCellData(xlPath, sheetName, 1, 1);
         String hospitalSearch = ExcelUtils.getCellData(xlPath, sheetName, 2, 1);
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        
         HomePage home = new HomePage(driver);
         home.selectLocation(location);
-        logger.info("Given Location input and selected the correct location");
+        logger.info("Location selected: " + location);
+        
         home.selectHospital(hospitalSearch);
-        logger.info("Given Hospital input and selected Hospital");
+        logger.info("Hospital search initiated for: " + hospitalSearch);
+    }
 
+    
+    
+    
+    @Feature("Hospital Search")
+    @Story("Collect Hospital URLs")
+    @Test(priority = 2, dependsOnMethods = {"searchForHospitals"})
+    public void collectHospitalLinks() {
+        logger.info("---------- Step 2: Collecting Hospital Links ----------");
+        
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         HospitalListPage listPage = new HospitalListPage(driver);
         List<WebElement> hospitalLinks = listPage.getHospitalLinks();
 
-        List<String> urls = new ArrayList<>();
-
         for (WebElement link : hospitalLinks) {
             js.executeScript("arguments[0].scrollIntoView(true);", link);
-            urls.add(link.getAttribute("href"));
+            hospitalUrls.add(link.getAttribute("href"));
         }
         
-        logger.info("Getting hospitals");
-        for (String url : urls) {
+        logger.info("Found " + hospitalUrls.size() + " hospital links.");
+    }
+
+    
+    
+    
+    @Feature("Hospital Search")
+    @Story("Validate Hospital Details")
+    @Test(priority = 3, dependsOnMethods = {"collectHospitalLinks"})
+    public void validateHospitalDetails() {
+        logger.info("---------- Step 3: Validating Hospital Details ----------");
+
+        for (String url : hospitalUrls) {
             driver.navigate().to(url);
 
             HospitalDetailPage detail = new HospitalDetailPage(driver);
@@ -72,10 +97,10 @@ public class TC_001_Identify_Hospitals extends BaseClass {
                                 + (parking ? "Available" : "Not Mentioned")
                 );
             }
-            logger.info("Captured every hospital that matched the criteria");
-            driver.navigate().back();
             
-            logger.info("Redirected to previous page");
+            logger.info("Processed: " + url);
+            driver.navigate().back();
         }
+        logger.info("---------- Identifying Hospital Test completed ----------");
     }
 }

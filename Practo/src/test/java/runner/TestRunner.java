@@ -6,11 +6,14 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-    //features = "src/test/resources/features",
-	//features = "src/test/resources/features/CorporateWellness.feature",
-	features = "src/test/resources/features/DiagnosticTopCities.feature",
+
+
+	features = {
+        "src/test/resources/features/CorporateWellness.feature",
+        "src/test/resources/features/DiagnosticTopCities.feature",
+        "src/test/resources/features/IdentifyHospitals.feature"
+    },
     //features = "@target/rerun.txt",
-	
 	//tags = "@regression",
     glue = {"stepdefinitions","hooks"}, // Ensure this matches your package name exactly (lowercase)
     plugin = {

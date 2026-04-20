@@ -49,8 +49,6 @@ public class TC_003_CorporateWellnessTest extends BaseClass {
         logger.info("Selecting the dropdown options");
         wellnessPage.selectOrganizationSize(orgSize);
         wellnessPage.selectInterestedIn(interest);
-
-        Assert.fail();
         wellnessPage.submitForm();
 
         // CAPTCHA manual pause
