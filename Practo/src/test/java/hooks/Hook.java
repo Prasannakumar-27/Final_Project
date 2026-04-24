@@ -15,7 +15,7 @@ import io.qameta.allure.Allure;
 
 public class Hook {
 
-    private static WebDriver driver;
+    protected static WebDriver driver;
 
     @Before
     public void setUp() {

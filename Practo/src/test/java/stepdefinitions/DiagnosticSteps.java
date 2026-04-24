@@ -3,7 +3,8 @@ package stepdefinitions;
 import org.openqa.selenium.WebDriver;
 
 import hooks.Hook;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pageObjects.DiagnosticPage;
 
 public class DiagnosticSteps {

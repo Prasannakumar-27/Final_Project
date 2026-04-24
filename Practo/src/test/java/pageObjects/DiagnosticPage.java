@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.BasePage;
 
-public class DiagnosticPage extends BasePage{
+public class DiagnosticPage extends BasePage {
 
     WebDriver driver;
 

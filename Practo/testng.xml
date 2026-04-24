@@ -8,7 +8,7 @@
 
   
   <test thread-count="5" name="Test1">
-  	<parameter name="browser" value="edge"/>
+  	<parameter name="browser" value="chrome"/>
     <classes>
       <class name="testCases.TC_001_Identify_Hospitals"/>
       <class name="testCases.TC_003_CorporateWellnessTest"/>
